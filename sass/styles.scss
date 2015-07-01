@@ -6,3 +6,254 @@
 
 // Import Bootstrap for Sass
 @import "bootstrap";
+
+// Import solarized colors
+@import "solarized-colors";
+
+/* Global reset */
+* {margin:0; padding:0; }
+
+html, body {
+  overflow-x: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  /*padding-top: 20px;*/
+  /*padding-bottom: 40px;*/
+}
+
+header, article, footer {
+  width: 100%;
+  /*margin: 0 auto;*/
+  margin: 0;
+  display: block;
+}
+
+article.white {
+  background: url(../images/halftone.png) repeat 0 0;
+}
+article.green {
+  background: url(../images/green_cup.png) repeat 0 0;
+}
+header, footer {
+  background: url(../images/green_cup.png) repeat 0 0;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Inconsolata', Georgia, Times, serif;
+    font-size: 280%;
+    line-height: 150%;
+    font-weight: bold;
+}
+h4, h5, h6{
+    font-size: 240%;
+}
+/*CSS3*/
+h1 {
+    text-shadow: 3px 3px 3px #ccc;
+}
+h2 {
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+p{
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-size: 120%;
+    line-height: 120%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+ul{
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-size: 120%;
+    line-height: 120%;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left:4%;
+}
+div {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+tt {
+    font-family: 'Inconsolata', Georgia, serif;
+    font-size: 120%;
+    color: hsl(0, 49%, 40%);
+}
+tt.small {
+  font-variant: small-caps;
+  font-size: 120%;
+}
+body a {
+     color: hsl(200, 49%, 40%);
+}
+
+/* Main message and download button */
+.jumbotron {
+  background: transparent;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  h1 {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  h2{
+    font-size: 52px;
+    line-height: 1;
+  }
+  .lead {
+    text-align: center;
+  }
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+.btn-custom { background-color: hsl(200, 49%, 24%) !important;
+background-repeat: repeat-x; filter:
+progid:DXImageTransform.Microsoft.gradient(startColorstr="#4898c0",
+endColorstr="#1f475b"); background-image: -khtml-gradient(linear, left top,
+left bottom, from(#4898c0), to(#1f475b)); background-image:
+-moz-linear-gradient(top, #4898c0, #1f475b); background-image:
+-ms-linear-gradient(top, #4898c0, #1f475b); background-image:
+-webkit-gradient(linear, left top, left bottom, color-stop(0%, #4898c0),
+color-stop(100%, #1f475b)); background-image: -webkit-linear-gradient(top,
+#4898c0, #1f475b); background-image: -o-linear-gradient(top, #4898c0, #1f475b);
+background-image: linear-gradient(#4898c0, #1f475b); border-color: #1f475b
+#1f475b hsl(200, 49%, 17%); color: #fff !important; text-shadow: 0 -1px 0
+rgba(0, 0, 0, 0.46); -webkit-font-smoothing: antialiased; }
+
+/* Supporting marketing content */
+.marketing {
+  margin: 0 auto;
+  max-width: 900px;
+  /*padding-left: 10px;*/
+  padding-right: 10px;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.marketing h4 {
+  padding-left: 10px;
+}
+/* Coding */
+pre {
+  text-align: left;
+  background: url(../images/halftone.png) repeat 0 0;
+  font-size: 90%;
+  font-weight: bold;
+}
+code {
+  background: transparent;
+  /*font-family: 'Inconsolata', Georgia, serif;*/
+  font-size: 100%;
+  font-weight: bold;
+  color: hsl(0, 49%, 40%);
+}
+
+ navbar 
+ Customize the navbar links to be fill the entire space of the .navbar 
+.bs-example {
+  margin: 0%;
+  background: transparent;
+  padding-top: 0.8em;
+  padding-bottom: 0.5em;
+  padding-left: 1%;
+  padding-right: 1%;
+  
+  .masthead {
+      padding-left: 10%;
+  }
+}
+.navbar .container {
+  background: transparent;
+}
+.navbar .nav {
+  margin: 0;
+  background: transparent;
+  width: 100%;
+}
+.navbar .nav li {
+  display: table-cell;
+  width: 1%;
+  height: 1%;
+  float: none;
+}
+.navbar .nav li a {
+  font-weight: bold;
+  text-align: center;
+  background: url(../images/halftone.png) repeat 0 0;
+  border-left: 1px solid rgba(255,255,255,.75);
+  border-right: 1px solid rgba(0,0,0,.1);
+  color: hsl(0, 49%, 40%);
+  height: 1%;
+}
+.navbar .nav li.active a {
+  background: url(../images/halftone.png) repeat 0 0;
+}
+.navbar .nav li.active a {
+  color: hsl(0, 49%, 30%);
+}
+.navbar .nav li a:hover {
+  color: hsl(0, 49%, 30%);
+}
+.navbar .nav li.active a:hover {
+  color: hsl(0, 49%, 30%);
+}
+.navbar .nav li:first-child a {
+  border-left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.navbar .nav li:last-child a {
+  border-right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* table elements */
+.table td.version {
+  font-size: 140%;
+  font-weight: bold;
+}
+/* img shadow */
+img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px black;
+}
+
+ Carousel 
+.carousel {
+  margin: 0;
+  padding: 0;
+}
+.carousel h3 {
+    margin: 0;     
+    color: #666;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    font-size: 300%;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.carousel .container .row {
+    padding-top:0;
+    color: black;
+}
+.carousel .item{
+    background: transparent;
+    text-align: center;
+    height: 580px !important;
+}
+.carousel-indicators li {
+  background-color: hsl(0, 49%, 30%);
+  /*border:1px solid #444;*/
+  border:2px solid #fff;
+}
+.carousel-indicators .active {
+  background-color: hsl(0, 49%, 50%);
+}

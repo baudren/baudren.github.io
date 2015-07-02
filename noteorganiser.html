@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Benjamin Audren">
+        <title>Benjamin Audren &middot; Note Organiser</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="ico/favicon.ico">
+        <!-- Roadmap from Github -->
+        <link rel="import" href="https://github.com/baudren/NoteOrganiser/devel/roadmap.md">
+    </head>
+  <body>
+      <div class="container-fluid">
+          <header>
+                <div class="bs-example">
+                <div class="container">
+                <nav role="navigation" class="navbar">
+                    <!-- Collection of nav links and other content for toggling -->
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="montepython.html">Monte Python</a></li>
+                            <li class="active"><a href="noteorganiser.html">Note Organiser</a></li>
+                            <li><a href="markup2beamer.html">Markup to Beamer</a></li>
+                            <li><a href="cv.html">CV</a></li>
+                            <li><a target="new" href="https://github.com/baudren">Github</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <article class="white">
+        <div class="jumbotron">
+            <h1>Note Organiser</h1>
+            <p class="lead"> A Graphical Note Taking software for scientists.</p>
+        </div>
+
+        <div class="container">
+        <div class="row-fluid marketing">
+            <div class="col-md-6">
+            <h4>News</h4>
+            <p> Latest release is <b>0.2</b>. See the <a
+                href="https://github.com/baudren/NoteOrganiser/blob/devel/roadmap.md">
+                current roadmap</a> to <b>0.3</b>.</p>
+            <p> Coming important features include: </p>
+            <ul>
+                <li>bootstrap usage for html</li>
+                <li>math support</li>
+                <li>global first page to browse all tags</li>
+            </ul>
+            <h4>Distribution</h4>
+                <p>The code source is available <a
+                href="https://github.com/baudren/noteorganiser">there</a>. Feel
+                free to report problems, request new features, or share your
+                opinion.</p>
+                <p>Note Organiser is realeased under the MIT license.</p>
+
+            </div>
+            <div class="col-md-6">
+            <h4>Description</h4>
+            <p> Still in development, it aims to deliver for version <tt>1.0</tt>
+            a fast, useful and cross-platform software to help scientists and
+            professional manage their notes on a daily basis.</p>
+            <p> Its main features are <tt>tag browsing</tt>, <tt>math support
+                (Mathjax)</tt>. So far, no currently available software has offered
+                me these needed aspects. The notes are taken with a slightly
+                modified <tt>Markdown</tt> syntax, so that they remain human
+                readable even when not previewed in html.</p>
+            </div>
+        </div>
+    </div>
+        </article>
+        <article class="green">
+            <div class="container">    
+        <div class="row-fluid marketing">
+            <div class="col-md-6">
+            <h4>Installation</h4>
+            If you have <code>git</code> installed, simply do
+            <pre class="text-left">
+    git clone https://github.com/baudren/noteorganiser
+    cd noteorganiser
+    python setup.py install --user</pre>
+            <p> Once installed, you can call <code>NoteOrganiser.py</code>
+            from anywhere.</p>
+            </div>
+            <div class="col-md-6">
+            <h4>Usage</h4>
+            <p> The first time you call the program, it will create a folder in
+            your home path, called <code>.noteorganiser</code>. You can then
+            place your notebooks there, or create one with the program and start
+            storing your wisdom!</p>
+            <p> To help you master the modified markdown syntax, please look in
+            the <code>example</code> folder. This contains my accumulated wisdom
+            while developing this application!</p>
+            </div>
+        </div>
+    </div>
+        </article>
+        <article class="white">
+            <div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>   
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-8"><img class="img-rounded"
+                                width="600" src="img/library.png"/></div>
+                                <div class="col-xs-4">
+                                <h3>Library</h3>
+                                <p>Browse your notebooks, organise them in
+                                folders.</p>
+                                <p>They are physical markdown files, located in
+                                your home directory. You can add and remove
+                                notebooks from this interface, and edit them via
+                                the Edit panel.</p>
+                                </div>
+                                <div class="clearfix visible-md-block"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-8"><img class="img-rounded"
+                                width="600" src="img/editing.png"/></div>
+                                <div class="col-xs-4">
+                                <h3>Editing</h3>
+                                <p>Edit your notes with a simple text editor.</p>
+                                <p>To create a new entry that respect the
+                                modified markdown syntax, simply use the <tt>New
+                                    Entry</tt> button.</p>
+                                <p>You can navigate between the different
+                                notebooks of the current folder, save the file
+                                and reload it from disk.</p>
+                                <p>When you want to browse your notes, push the
+                                <tt>Preview notebook</tt> button.</p>
+                                </div>
+                                <div class="clearfix visible-md-block"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-8"><img class="img-rounded"
+                                width="600" src="img/preview.png"/></div>
+                                <div class="col-xs-4">
+                                <h3>Preview</h3>
+                                <p>Preview your notes in html, with syntax
+                                coloring (using Pygments)</p>
+                                </div>
+                                <div class="clearfix visible-md-block"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-8"><img class="img-rounded"
+                                width="600" src="img/preview-filter.png"/></div>
+                                <div class="col-xs-4">
+                                <h3>Tag filter</h3>
+                                <p>The tag list is sorted by number of
+                                occurences. By clicking on a tag, it refreshes
+                                the preview panel and display only the relevant
+                                posts.</p>
+                                <p>The remaining tag buttons available allow for
+                                further filtering.</p>
+                                </div>
+                                <div class="clearfix visible-md-block"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </article><footer>
+        <div class="container">
+            <p class="text-right">&copy; Benjamin Audren 2014-2015.</p>
+        </div> <!-- /container -->
+        </footer>
+    </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/docs.min.js"></script>
+        <script src="js/transition.js"></script>
+        <script src="js/alert.js"></script>
+        <script src="js/modal.js"></script>
+        <script src="js/dropdown.js"></script>
+        <script src="js/scrollspy.js"></script>
+        <script src="js/tab.js"></script>
+        <script src="js/tooltip.js"></script>
+        <script src="js/popover.js"></script>
+        <script src="js/button.js"></script>
+        <script src="js/collapse.js"></script>
+        <script src="js/carousel.js"></script>
+  </body>
+</html>
+

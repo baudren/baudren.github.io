@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Benjamin Audren">
+        <title>Benjamin Audren &middot; Monte Python</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="ico/favicon.ico">
+    </head>
+  <body>
+      <div class="container-fluid">
+          <header>
+                <div class="bs-example">
+                <div class="container">
+                <nav role="navigation" class="navbar">
+                    <!-- Collection of nav links and other content for toggling -->
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><a href="montepython.html">Monte Python</a></li>
+                            <li><a href="noteorganiser.html">Note Organiser</a></li>
+                            <li><a href="markup2beamer.html">Markup to Beamer</a></li>
+                            <li><a href="cv.html">CV</a></li>
+                            <li><a target="new" href="https://github.com/baudren">Github</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <article class="white">
+        <div class="jumbotron">
+            <h1>Monte Python</h1>
+            <p class="lead">
+            The Monte Carlo code for <tt class="small">class</tt> in Python</p>
+            <a class="btn btn-large btn-custom" id="montepython-download">
+            Download the latest version</a>
+        </div>
+
+        <div class="container">
+        <div class="row-fluid marketing">
+            <div class="col-md-6">
+            <h4>News</h4>
+            <p> Latest release is <b>2.1</b>, see the change log down there (to use
+                alongside <a href="http://www.class-code.net"
+                target="new">CLASS</a>, version <b>2.4</b>).</p>
+                <p> <tt class="small">Monte&nbsp;Python</tt> is released
+                under the MIT license, with the additional clause that you cite the
+                release paper <a
+                href="http://arxiv.org/abs/1210.7183">Parameter Inference</a> if you
+                want to use it in a publication.</p>
+                <p> The latest included likelihood are <a
+                href="http://arxiv.org/abs/1403.2369">POLARBEAR</a> and <a
+                href="http://supernovae.in2p3.fr/sdss_snls_jla/ReadMe.html">JLA</a>
+                (SuperNovae data). Note that the data for JLA has to be downloaded
+                separately, because of its size. The full changelog is available on
+                the <a
+                href="https://github.com/baudren/montepython_public/blob/master/changelog.dat"</p>Github
+                page</a>.</p>
+                <p> To be informed by mail of the latest release, write to <tt
+                class="adress">benjamin dot
+                audren at gmail dot com</tt>, and you will be added to the mailing list.</p>
+            </div>
+            <div class="col-md-6">
+            <h4>Desription</h4>
+            <p><tt class="small">Monte&nbsp;Python</tt> is a Monte Carlo code for
+            Cosmological Parameter extraction. It contains likelihood codes of
+            most recent experiments, and interfaces with the Boltzmann code <tt
+            class="small">class</tt> for computing the cosmological
+            observables.</p>
+            <p>Several sampling methods are available: Metropolis-Hastings,
+            Nested Sampling (through <a href="">MultiNest</a>), EMCEE (through <a
+                href="">CosmoHammer</a>) and Importance Sampling.</p>
+            </div>
+        </div>
+        </div>
+        </article>
+        <article class="green">
+        <div class="container">
+        <div class="row-fluid marketing">
+            <div class="col-md-6">
+            <h4>Installation</h4>
+            <p> The whole procedure is detailled <a
+                href="http://monte-python.readthedocs.org/en/latest/installation.html">there</a>.
+            You will need Python 2 (from 2.5 to 2.7). The Python packages will be
+            installed automatically by the installation script.</p>
+            <p> If you have <i>git</i>, the easiest way to install the code is to
+            simply issue</p>
+            <pre class="text-left">
+    git clone https://github.com/baudren/montepython_public
+    cd montepython_public
+    python setup.py install --user</pre>
+            <p> This will create a <var>montepython_public</var> directory, and
+            install the required Python modules. You will still have to install
+            <tt class="small">class</tt> by yourself, though.</p>
+            </div>
+            <div class="col-md-6">
+            <h4>Documentation</h4>
+            <p> A complete documentation, alongside detailled instructions on
+            installing the dependencies, notably the <tt class="small">class</tt>
+            wrapper and the Planck likelihood is available on <a
+                href="http://monte-python.readthedocs.org/en/latest/">Read the Docs</a>.
+            A less complete pdf version is also <a
+                href="http://readthedocs.org/projects/monte-python/downloads/pdf/latest">available</a>.</p>
+            <h4>Getting Help</h4>
+            <p> If the information contained in the documentation is not enough,
+            please search for a similar problem on the <a
+                href="https://github.com/baudren/montepython_public/issues">issues</a>
+            page. If no post tackle your problem, create one: we will be
+            automatically notified.</p>
+            </div>
+        </div>
+    </div>
+        </article>
+        <article class="white">
+        <div class="container">
+        <div class="row-fluid marketing">
+            <div class="col-md-6">
+            <h4>Contributing</h4>
+            <p> To contribute to the development, share your modifications, go
+                to the <a href="https://github.com/baudren/montepython_public"
+            target="new">Github</a> page. Check out the code, follow the good
+            practice described <a
+            href="https://github.com/lesgourg/class_public/wiki/Public-Contributing">on
+            this page</a>, and when you are done modifying the code, send us a
+            Pull-Request.</p>
+            <h4>Learning the code</h4>
+            <p>The slides from a one-week workshop to learn <tt
+                class="small">class</tt> and <tt class="small">Monte Python</tt>
+            are available on <a
+            href="http://lesgourg.web.cern.ch/lesgourg/class-tour/class-tour.html">this
+            page</a>. The slide should reflect the current version of the codes.
+            There are also exercices available, with solutions.</p> </div>
+            <div class="col-md-6">
+            <h4>Python</h4>
+            <p> The code is written in the Python language, which is a
+            high-level, clear to read and easy to learn language. It also
+            wraps efficient C routines for intensive numerical manipulation.</p>
+            <p>A good introduction for scientists can be found <a
+            href="http://scipy-lectures.github.io/intro/index.html">there</a>.
+            <a href="http://astropython.blogspot.ch/">This blog</a> is also a
+            useful stop, containing many useful tips for using Python daily in a
+            scientific environment.</p>
+            </div>
+        </div>
+        </div>
+        </article>
+        <article class="green">
+        <div class="row-fluid marketing container">
+            <div class="col-md-12">
+                <h4>Previous versions</h4>
+                <table class="table">
+                <tr>
+                    <td valign=top width="20%" class="version"> <a href="https://www.dropbox.com/s/0z3mznutf9nibqt/montepython_v2.0.5.tar.bz2?dl=1">v2.0</a>:</td>
+                    <td valign=top width="80%">
+                    <li style="margin-top:0px;"> You can now use
+                    <tt>MultiNest</tt> (credits F. Feroz and M. Hobson), and the
+                    <tt>CosmoHammer</tt> (credits J. Akeret and S. Seehars)
+                    within Monte Python. Both modules are commented, and their
+                    documentation is available as before on the automatically
+                    generated documentation.<br>
+
+                    MultiNest has been wrapped in Python in the (credits J.
+                    Buchner, see <a
+                        href="https://github.com/JohannesBuchner/PyMultiNest"
+                        target="new">PyMultiNest package</a>), and the interface
+                    with Monte Python has been mostly done by Jesus Torrado. It
+                    is an excellent tool for exploring weirdly shaped posterior
+                    distribution, and multi-modal ones (a feature is being tested
+                    of automatically extracting the different modes and creating
+                    separate Monte Python folders). It also computes the evidence
+                    of a model.<br>
+
+                    The CosmoHammer was implemented with the help of its creators
+                    in ETH, and now its basic functionnalities working. It is a
+                    great tool to make use of gigantic clusters.<br>
+
+                    <em>Note that both the use of CosmoHammer and PyMultiNest through
+                    Monte Python is restricted to their specific licenses, which
+                    includes citing their original paper(s). See their respective
+                    website for proper usage.</em><br>
+
+                    <li> Finally implemented an over sampling scheme, that allows
+                    a fast running with likelihoods with a high number of
+                    nuisance parameters. The user can oversample each block of
+                    nuisance parameters at a rate of his choice. See the example
+                    in base.param, and don't forget to call the code with the
+                    option <tt>-j fast</tt>.
+
+                    <li> Repackaging: the whole folder now should behave more
+                    like a proper python package. This included renaming the
+                    `code' directory into `montepython', and moving the
+                    `likelihoods' folder inside this new `montepython'. Also,
+                    considering a likelihood named `lkl', instead of following
+                    the previous structure:
+                    <tt>likelihoods/lkl/lkl.py</tt> and <tt>.data</tt>,
+                    you should now use:
+                    <tt>montepython/likelihoods/lkl/__init__.py</tt> and
+                    <tt>lkl.data</tt>.
+                    If you implemented a custom likelihood, you should obviously
+                    update it to this standard. Note that the syntax to import
+                    the module likelihood_class has changed inside the
+                    likelihoods.
+
+                    <li> New WiggleZ analysis (credits Signe Riemer, David
+                    Parkinson) working and tested, apart from the use of the
+                    nuisance parameter P0 (WIP)
+
+                    <li> Update of the BAO data from 2013 (called `bao_boss`,
+                    reference in the data/ folder), and added the data from
+                    CFHTLens and Planck_SZ measurement.
+
+                    <li> First version of the test module, with basic
+                    functionalities being checked.  It needs the `nose' Python
+                    package to run.  Notably, there is a test listing all the
+                    needed functions that the cosmological code must have in
+                    order to work with Monte Python - this can be a good
+                    guideline to implement a wrapper around another Boltzmann
+                    code.
+
+                    <li> Convention of path changed to comply with Python
+                    standards. This might affect your modified likelihoods (you
+                    should now use the command os.path.join to create paths.
+                </tr>
+                <tr>
+                    <td valign=top width="20%" class="version"> <a href="https://www.dropbox.com/s/l7mnhwsktp1m8b5/montepython_v1.2.5.tar.bz2?dl=1">v1.2</a>:</td>
+                    <td valign=top width="80%">
+                    <li style="margin-top:0px;">
+                    Added the Planck likelihoods (<tt>Planck_highl</tt>,
+                    <tt>Planck_lowl</tt>, <tt>Planck_lensing</tt> and
+                    <tt>lowlike</tt>) (download the code and the data
+                    from <a style="margin-left: 0px; margin-right: 0px"
+                        href="http://www.sciops.esa.int/index.php?project=planck&page=Planck_Legacy_Archive">ESA website</a> under frequently requested products) and provide a input parameter
+                    file as well as a covariance matrix and a bestfit
+                    file for the base LCDM case (note that you will have
+                    to use the option <tt>-f 1.5</tt> to change the
+                    acceptance rate of the chains: as the posterior
+                    distribution of the nuisance parameters is highly
+                    non gaussian, this factor will ensure an acceptance
+                    rate close to 0.2.
+                    <li>Update of <tt>WMAP</tt> to the 9yr results.
+                    <li> Added a Cholesky decomposition method to speed up sampling
+                    for likelihoods with a large number of nuisance parameters
+                    (<a href="http://arxiv.org/abs/1304.4473">A.
+                        Lewis</a>), which groups parameters by
+                    blocks of same speed.
+                    <li> Transfered the documentation to a sphinx-documentation. Most
+                    comments in the code have been replaced by docstrings,
+                    automatically extracted to create a website. You can now
+                    navigate the different functions, see the dependencies, see
+                    the source code in one convenient place.
+                    <li> Renamed both <tt>io.py</tt> and <tt>parser.py</tt> into <tt>io_mp.py</tt> and
+                    <tt>parser_mp.py</tt> (mp for Monte Python). It was conflicting with
+                    some installed packages of python, both being some very often
+                    used names.
+                    <li> Removed the comparison between input param and log.param:
+                    always choose the latest.
+                    <li> Changed the architecture of analyze.py file. The whole thing
+                    is no longer a class, but instead a collection of functions.
+                    To exchange information between these functions, a new class
+                    called `information` has been created.
+                    <li> Removed the common.py file, merging its content (lockfile
+                    system) with io_mp.py
+                    <li> Transfered the log_flag from being an indendent quantity
+                    being exchanged between data and likelihoods to a proper
+                    attribute of the data class. Since no comparison is done
+                    any-more, there was no reason to keep it this way anymore.
+                </tr>
+                <tr>
+                    <td valign=top width="20%" class="version"> <a href="https://dl.dropbox.com/s/m3d5a2eqnhnb97g/montepython_v1.1.0.tar.bz2?dl=1">v1.1</a>:</td>
+                    <td valign=top width="80%">
+                    <li style="margin-top:0px;">
+                    Added the following likelihoods: SPT full data (called
+                    <tt>spt_2500</tt> in the likelihood directory), compilation
+                    of BAO scale data (called <tt>bao</tt>), compilation of
+                    quasar time-delay data (called <tt>timedelay</tt>)
+                    <li> To speed up the production of plots, you can play with a
+                    new extension defining the print-out format: use the
+                    command-line option <tt>-ext png</tt>, or <tt>eps</tt>, or
+                    <tt>pdf</tt> (from the fastest to the slowest format).
+                    <li> Added a lockfile system, that should prevent a file from
+                    being written simultaneously by two programs, when launching
+                    several different runs at the same time.  
+                    <li> Changed a detail in the input file syntax, concerning
+                    parameter prior edges. To leave the prior edge undefined, you
+                    can still use "-1" as before, or "None". But if your prior
+                    edge is really minus one (for instance for w), you can write
+                    "-1."
+                    <li>  Function <tt>cosmo_update_arguments()</tt> modified for
+                    better readability and simpler use (this function allows to
+                    rename or remap input parameters at each step before passing
+                    them to CLASS). The syntax pattern "<tt>try, except</tt>" is
+                    not needed anymore. 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign=top width="20%" class="version"> <a href="https://dl.dropbox.com/s/zre5kvyb681goxt/montepython_v1.0.1.tar.bz2?dl=1">v1.0</a>:</td>
+                    <td valign=top width="80%">
+                    <li style="margin-top:0px"> Initial release. Contains the WMAP 7 likelihood, Hubble
+                    Space Telescope, supernovae distance luminosity, all the
+                    newdat format experiments (spt, acbar, quad, boomerang, ...),
+                    WiggleZ, a Euclid-like galaxy survey, a Euclid-like cosmic
+                    shear survey,  and a simple Planck-like likelihood. Two
+                    covariance matrices are included, one for WMAP 7 + SPT, one
+                    for the Planck-like likelihood. More to come !
+                </table>
+            </div>
+        </div>
+        </article>
+        <footer>
+        <div class="container">
+            <p class="text-right">&copy; Benjamin Audren 2014-2015.</p>
+        </div> [> /container <]
+    </footer>
+        </div>
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="javascripts/jquery.js"></script>
+        <script>
+            $(document).ready (function () {
+                $.getJSON("https://api.github.com/repos/baudren/montepython_public/tags").done(function (data) {
+                    var release = data[0];
+                    var number = release.name;
+                    var url = 'https://github.com/baudren/montepython_public/archive/'+number+'.zip'
+                    $ ('#montepython-download').attr ('href', url);
+                })
+            });
+        </script>
+        <script src="javascript/bootstrap.js"></script>
+        <script src="javascripts/bootstrap-transition.js"></script>
+        <script src="javascripts/bootstrap-alert.js"></script>
+        <script src="javascripts/bootstrap-modal.js"></script>
+        <script src="javascripts/bootstrap-dropdown.js"></script>
+        <script src="javascripts/bootstrap-scrollspy.js"></script>
+        <script src="javascripts/bootstrap-tab.js"></script>
+        <script src="javascripts/bootstrap-tooltip.js"></script>
+        <script src="javascripts/bootstrap-popover.js"></script>
+        <script src="javascripts/bootstrap-button.js"></script>
+        <script src="javascripts/bootstrap-collapse.js"></script>
+        <script src="javascripts/bootstrap-carousel.js"></script>
+        <script src="javascripts/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

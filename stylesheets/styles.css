@@ -11983,3 +11983,13 @@ img {
 .carousel .carousel-indicators .active {
   background-color: #be4141;
 }
+/* line 271, ../sass/styles.scss */
+.carousel a.carousel-control {
+  vertical-align: middle;
+}
+
+/* line 275, ../sass/styles.scss */
+span.fa {
+  display: inline-block;
+  line-height: inherit;
+}

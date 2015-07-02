@@ -268,4 +268,11 @@ img {
     .carousel-indicators .active {
     background-color: hsl(0, 49%, 50%);
     }
+    a.carousel-control {
+        vertical-align: middle;
+    }
+}
+span.fa {
+    display: inline-block;
+    line-height: inherit;
 }

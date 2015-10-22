@@ -45,7 +45,7 @@
         <div class="row-fluid marketing">
             <div class="col-md-6">
             <h4>News</h4>
-            <p> Latest release is <b>2.1</b>, see the change log down there (to use
+            <p> Latest release is <b>2.2</b>, see the change log down there (to use
                 alongside <a href="http://www.class-code.net"
                 target="new">CLASS</a>, version <b>2.4</b>).</p>
                 <p> <tt class="small">Monte&nbsp;Python</tt> is released
@@ -53,14 +53,13 @@
                 release paper <a
                 href="http://arxiv.org/abs/1210.7183">Parameter Inference</a> if you
                 want to use it in a publication.</p>
-                <p> The latest included likelihood are <a
-                href="http://arxiv.org/abs/1403.2369">POLARBEAR</a> and <a
-                href="http://supernovae.in2p3.fr/sdss_snls_jla/ReadMe.html">JLA</a>
-                (SuperNovae data). Note that the data for JLA has to be downloaded
-                separately, because of its size. The full changelog is available on
-                the <a
-                href="https://github.com/baudren/montepython_public/blob/master/changelog.dat"</p>Github
-                page</a>.</p>
+                <p>The latest change is the implementation of the option
+                <tt>--update</tt>, to update the covariance matrix of the proposal
+                density automatically and converge faster (works with or
+                without mpi, see <tt>--help</tt> for details). The latest
+                likelihoods include Planck 2015 and SDSS LRG4. The full
+                changelog is available on the
+                <a href="https://github.com/baudren/montepython_public/blob/2.2/changelog.dat"</p>Github page</a>.</p>
                 <p> To be informed by mail of the latest release, write to <tt
                 class="adress">benjamin dot
                 audren at gmail dot com</tt>, and you will be added to the mailing list.</p>
@@ -155,6 +154,61 @@ python setup.py install --user</pre>
                 <h4>Previous versions</h4>
                 <table class="table">
                 <tr>
+                    <td valign=top width="20%" class="version"> <a href="https://www.dropbox.com/s/0z3mznutf9nibqt/montepython_v2.1.3.tar.bz2?dl=1">v2.1</a>:</td>
+                    <td valign=top width="80%">
+                    <li style="magin-top:0px;">Implemented the
+                      <a href="http://arxiv.org/abs/1401.4064">
+                        JLA new SuperNovae analysis</a>.
+                      There are two versions available, <tt>JLA</tt> and
+                      <tt>JLA_simple</tt>. Thanks to Martin Kunz, Stefano
+                      Foffa, Yves Dirian and Valeria Pettorino for their
+                      testing and help in debugging. The data being massive,
+                      you are asked to download it manually.</br>
+
+                      Implemented the 
+                      <a href="http://arxiv.org/abs/1403.2369">POLARBEAR
+                      likelihood</a> (measurement of the BB spectrum in four
+                      bins at large ell).</br>
+
+                      Implemented a new observable, cosmic clocks, that
+                      measure the Hubble rate at different redshifts. Full
+                      information can be found in data/cosmic_clocks/README.txt
+                      (credits Licia Verde)</br>
+
+                      Fixed bao_2013.txt data, it now uses the right numbers,
+                      referring to the correct sound horizon. Thanks to Martin
+                      Kunz, Stefano Foffa and Yves Dirian for finding it.</br>
+
+                      Implemented the
+                      <a href="http://arxiv.org/abs/1401.0358">BAO measurements
+                        from WiggleZ</a>. Use the new
+                      likelihood, called <tt>WiggleZ_bao</tt>, in your
+                      parameter file.</br>
+
+                      Added a new BAO data point from Ross et. al. 2014,
+                      available in <tt>data/bao_2014.txt</tt> along with all
+                      the previous ones. Notice that all reference to the
+                      historical and unfortunate rs_rescale is now gone - all
+                      the data points are stored as if computed with the true
+                      value of the sound horizon, and not the Eisenstein and Hu
+                      98 formula. Thanks to Antonio Cuesta for his help in
+                      annihilating this issue.
+                    <li>You can now combine parameters when analyzing (at your
+                      own risk, beware of the priors), using a new dictionary
+                      in the <tt>extra plot file</tt>.
+                    <li>Unified scheme for handling complex parameters from
+                      CLASS. You can now specify for instance
+                      <tt>m_ncdm__1</tt>,
+                      <tt>m_ncdm__2</tt> as running parameters, and they will
+                      be treated correctly. Note the double underscore in the
+                      names!
+                    <li>It is now possible to add derived parameters that were
+                      not chosen before the run began.
+                    <li>added a <tt>--silent</tt> option to avoid printing on-screen
+                      the steps in parameter space.
+                    <li>Monte Python is now under the MIT License (permissive
+                      BSD-type license)
+                </tr>
                     <td valign=top width="20%" class="version"> <a href="https://www.dropbox.com/s/0z3mznutf9nibqt/montepython_v2.0.5.tar.bz2?dl=1">v2.0</a>:</td>
                     <td valign=top width="80%">
                     <li style="margin-top:0px;"> You can now use
